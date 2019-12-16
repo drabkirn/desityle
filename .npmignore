@@ -1,0 +1,7 @@
+node_modules/
+# Local Netlify folder
+.netlify
+
+# No Need of these files
+src/
+gulpfile.js

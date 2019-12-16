@@ -1,6 +1,6 @@
 {
   "name": "desityle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The design library we use at Drabkirn",
   "main": "index.js",
   "scripts": {
