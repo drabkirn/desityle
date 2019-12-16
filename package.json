@@ -1,0 +1,38 @@
+{
+  "name": "desityle",
+  "version": "1.0.0",
+  "description": "The design library we use at Drabkirn",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drabkirn/desityle.git"
+  },
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "desityle",
+    "html",
+    "css"
+  ],
+  "author": "Drabkirn",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/drabkirn/desityle/issues"
+  },
+  "homepage": "https://github.com/drabkirn/desityle#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-replace": "^1.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "merge-stream": "^2.0.0"
+  }
+}
