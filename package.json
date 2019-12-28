@@ -1,7 +1,7 @@
 {
   "name": "desityle",
-  "version": "1.0.2",
-  "description": "The design library we use at Drabkirn",
+  "version": "1.0.3",
+  "description": "A Sleek and simple CSS Library that we use at Drabkirn and you can too",
   "main": "index.js",
   "scripts": {
     "build": "gulp"
@@ -16,7 +16,8 @@
     "ux",
     "desityle",
     "html",
-    "css"
+    "css",
+    "drabkirn"
   ],
   "author": "Drabkirn",
   "license": "AGPL-3.0",
