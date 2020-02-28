@@ -1,6 +1,6 @@
 {
   "name": "desityle",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Sleek and simple CSS Library that we use at Drabkirn and you can too",
   "main": "index.js",
   "scripts": {
