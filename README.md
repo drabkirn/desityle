@@ -13,6 +13,7 @@
 [![Pulls](https://img.shields.io/github/issues-pr/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/pulls)
 [![Pulls](https://img.shields.io/github/issues-pr-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/pulls)
 [![License](https://img.shields.io/github/license/drabkirn/desityle.svg)](https://choosealicense.com/licenses/agpl-3.0/)
+[![CLA assistant](https://cla-assistant.io/readme/badge/drabkirn/desityle)](https://cla-assistant.io/drabkirn/desityle)
 
 We are building custom design library Desityle from scratch with DIY(Do It Yourself) concept in mind.
 
