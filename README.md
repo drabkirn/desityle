@@ -7,7 +7,7 @@
 > A Sleek and simple CSS Library that we use at Drabkirn and you can too.
 
 <!-- Add CI/CD info, language, main frameworks used from shields.io. Example -->
-[![Desityle 1.0.3](https://img.shields.io/badge/Desityle-v1.0.3-green.svg)](https://www.npmjs.com/package/desityle)
+[![Desityle 1.0.7](https://img.shields.io/badge/Desityle-v1.0.7-green.svg)](https://www.npmjs.com/package/desityle)
 [![Issues](https://img.shields.io/github/issues/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Issues closed](https://img.shields.io/github/issues-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Pulls](https://img.shields.io/github/issues-pr/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/pulls)
@@ -17,7 +17,7 @@
 
 We are building custom design library Desityle from scratch with DIY(Do It Yourself) concept in mind.
 
-**See Demo at: [https://drabkirn.desityle.cdadityang.xyz/](https://drabkirn.desityle.cdadityang.xyz/)**
+**See Demo at: [https://drabkirn.cdadityang.xyz/desityle](https://drabkirn.cdadityang.xyz/desityle)**
 
 -----
 -----
@@ -35,21 +35,21 @@ We are building custom design library Desityle from scratch with DIY(Do It Yours
 1. **Using CDN on your static website:**
     - Just include our CSS and JS CDN files in your `index.html`(or any other `.html` file):
         ```html
-        <link rel="stylesheet" href="https://unpkg.com/desityle@1.0.3/dist/css/desityle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/desityle@1.0.7/build/css/desityle.min.css" />
 
-        <script src="https://unpkg.com/desityle@1.0.3/dist/js/desityle.min.js"></script>
+        <script src="https://unpkg.com/desityle@1.0.7/build/js/desityle.min.js"></script>
         ```
 
 2. **Using in React or other JS Libraries/Frameworks:**
     - Install using NPM or Yarn:
         ```bash
-        $ yarn add desityle@1.0.3
+        $ yarn add desityle@1.0.7
         # or
-        $ npm install desityle@1.0.3 --save
+        $ npm install desityle@1.0.7 --save
         ```
     - Then Import in your libraries:
         ```js
-        import 'desityle/dist/css/desityle.min.css';
+        import 'desityle/build/css/desityle.min.css';
         ```
 
 -----
@@ -73,9 +73,9 @@ We are building custom design library Desityle from scratch with DIY(Do It Yours
     # or `npm run build`
     ```
 
-4. Serve you app from the `dist/` folder created by the above command.
+4. Serve you app from the `build/` folder created by the above command.
     ```bash
-    cd dist
+    cd build
     # Example, to start on localhost:3002 or YOUR_IP:3002
     python -m SimpleHTTPServer 3002
     ```
