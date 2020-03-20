@@ -15,7 +15,9 @@ var globs = {
   js: './src/js/**/*.js',
   html: './src/*.html',
   images: './src/assets/**',
-  fonts: './src/fonts/**/**'
+  fonts: './src/fonts/**/**',
+  customCSS: './src/custom.css',
+  customJS: './src/custom.js',
 };
 
 // First clean the build folder, it will delete it and recreate it
@@ -44,6 +46,18 @@ gulp.task('styles', gulp.series('clean', function() {
     .pipe(gulp.dest(globs.build + '/css'));
 }));
 
+// Take all CSS in /css folder -> Add auto prefixer to them
+// Then concat all these into desityle.css
+// Export to /build folder
+gulp.task('stylesnonminify', gulp.series('clean', function() {
+  return gulp.src(globs.css)
+    .pipe(replace(`/* ADD LICENSE HERE */`, `/* Drabkirn Desityle - See License at: https://go.cdadityang.xyz/DcenS */`))
+    .pipe(replace(`/* OTHER LICENSE HERE */`, `/* This file uses others lib whose license info is retained for you to review. */`))
+    .pipe(autoprefixer())
+    .pipe(concat('desityle.css'))
+    .pipe(gulp.dest(globs.build + '/css'));
+}));
+
 // Take all JS in /js folder
 // Then concat all these into desityle.min.js
 // Then Minify and export to /build folder
@@ -54,12 +68,23 @@ gulp.task('js', gulp.series('clean', function() {
     .pipe(gulp.dest(globs.build + '/js'));
 }));
 
+// Take all JS in /js folder
+// Then concat all these into desityle.min.js
+// Then Minify and export to /build folder
+gulp.task('jsnonminify', gulp.series('clean', function() {
+  return gulp.src(globs.js)
+    .pipe(replace(`// ADD LICENSE HERE`, `// Drabkirn Desityle - See License at: https://go.cdadityang.xyz/DcenS`))
+    .pipe(concat('desityle.js'))
+    .pipe(gulp.dest(globs.build + '/js'));
+}));
+
 // Take the HTML file, minify it with params below
 gulp.task('html', gulp.series('clean', function() {
   return gulp.src(globs.html)
   .pipe(replace(`<link rel="stylesheet" href="css/01-css-reset.css">`, ''))
   .pipe(replace(`<link rel="stylesheet" href="css/02-fonts.css">`, ''))
   .pipe(replace(`<link rel="stylesheet" href="css/03-helpers.css">`, ''))
+  .pipe(replace(`<link rel="stylesheet" href="custom.css">`, ''))
   .pipe(replace(`<link rel="stylesheet" href="css/04-desityle.css">`, '<link rel="stylesheet" href="css/desityle.min.css">'))
   .pipe(replace(`<script src="./js/01-app.js"></script>`, '<script src="./js/desityle.min.js"></script>'))
   .pipe(htmlmin({
@@ -72,7 +97,21 @@ gulp.task('html', gulp.series('clean', function() {
   .pipe(gulp.dest('./build'));
 }));
 
+// Minimizing + Moving custom CSS and JS files
+gulp.task('customCSS', gulp.series('clean', function() {
+  return gulp.src(globs.customCSS)
+    .pipe(autoprefixer())
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./build'));
+}));
+
+gulp.task('customJS', gulp.series('clean', function() {
+  return gulp.src(globs.customJS)
+    .pipe(uglify())
+    .pipe(gulp.dest('./build'));
+}));
+
 // Build the task
-gulp.task('build', gulp.parallel('assets', 'styles', 'js', 'html'));
+gulp.task('build', gulp.parallel('assets', 'styles', 'stylesnonminify', 'js', 'jsnonminify', 'html', 'customCSS', 'customJS'));
 
 gulp.task('default', gulp.series('build'));

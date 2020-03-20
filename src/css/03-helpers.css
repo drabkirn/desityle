@@ -710,6 +710,35 @@
 }
 /* Positioning END */
 
+/* Fonts Sizing START */
+.fs-1 {
+  font-size: 1em;
+}
+
+.fs-1-2 {
+  font-size: 1.2em;
+}
+
+.fs-1-4 {
+  font-size: 1.4em;
+}
+
+.fs-1-6 {
+  font-size: 1.6em;
+}
+
+.fs-1-8 {
+  font-size: 1.8em;
+}
+
+/* Medium Devices: Tab */
+@media only screen and (max-width: 768px) {
+  .fs-1-4, .fs-1-6, .fs-1-8 {
+    font-size: 1.3em;
+  }
+}
+
+/* Fonts Sizing END */
 
 /* Responsive columns START */
 [class*="col-"] {

@@ -69,9 +69,19 @@ i, em {
   font-style: italic;
 }
 
+/* Links under p, u, i, b, em must be equalized */
+p > a, u > a, i > a, b > a, em > a {
+  font-size: 1em;
+}
+
 hr {
   width: 100%;
   margin: 2em 0;
+}
+
+.hr-center {
+  width: 40%;
+  margin: 3em auto;
 }
 
 blockquote {
@@ -569,9 +579,10 @@ ul {
   }
 }
 
+/* Navbar END */
 
 
-/* Main Intro/Header */
+/* Main Intro/Header START */
 /* Large devices: Laptops */
 @media only screen and (min-width: 768px) {
   .header-intro-mob {
@@ -585,8 +596,7 @@ ul {
     display: none;
   }
 }
-/* Navbar END */
-
+/* Main Intro/Header END */
 
 /* Footer START */
 .footer-baaaaaa p {
@@ -701,3 +711,12 @@ ul {
   }
 }
 /* UL END */
+
+
+/* Others START */
+.field-explanation {
+  font-style: italic;
+  font-size: 0.9em;
+  margin: 3px 0;
+}
+/* Others END */

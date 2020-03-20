@@ -1,3 +1,5 @@
+// ADD LICENSE HERE
+
 document.addEventListener('DOMContentLoaded', () => {
   const htmlTag = document.querySelector('html');
 
