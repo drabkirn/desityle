@@ -4,10 +4,10 @@
 
 # Drabkirn Desityle
 
-> A Sleek and simple CSS Library that we use at Drabkirn and you can too.
+> Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind.
 
 <!-- Add CI/CD info, language, main frameworks used from shields.io. Example -->
-[![Desityle 1.0.7](https://img.shields.io/badge/Desityle-v1.0.7-green.svg)](https://www.npmjs.com/package/desityle)
+[![Desityle 1.1.0](https://img.shields.io/badge/Desityle-v1.1.0-green.svg)](https://www.npmjs.com/package/desityle)
 [![Issues](https://img.shields.io/github/issues/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Issues closed](https://img.shields.io/github/issues-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Pulls](https://img.shields.io/github/issues-pr/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/pulls)
@@ -15,7 +15,7 @@
 [![License](https://img.shields.io/github/license/drabkirn/desityle.svg)](https://choosealicense.com/licenses/agpl-3.0/)
 [![CLA assistant](https://cla-assistant.io/readme/badge/drabkirn/desityle)](https://cla-assistant.io/drabkirn/desityle)
 
-We are building custom design library Desityle from scratch with DIY(Do It Yourself) concept in mind.
+Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind. Desityle helps you to make your websites look stunning neat and gloriously attractive. Our default mode is dark, thus eyes saving to the rescue. Check out what we've got for you in the bag:
 
 **See Demo at: [https://drabkirn.cdadityang.xyz/desityle](https://drabkirn.cdadityang.xyz/desityle)**
 
@@ -35,17 +35,17 @@ We are building custom design library Desityle from scratch with DIY(Do It Yours
 1. **Using CDN on your static website:**
     - Just include our CSS and JS CDN files in your `index.html`(or any other `.html` file):
         ```html
-        <link rel="stylesheet" href="https://unpkg.com/desityle@1.0.7/build/css/desityle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/desityle@1.1.0/build/css/desityle.min.css" />
 
-        <script src="https://unpkg.com/desityle@1.0.7/build/js/desityle.min.js"></script>
+        <script src="https://unpkg.com/desityle@1.1.0/build/js/desityle.min.js"></script>
         ```
 
 2. **Using in React or other JS Libraries/Frameworks:**
     - Install using NPM or Yarn:
         ```bash
-        $ yarn add desityle@1.0.7
+        $ yarn add desityle@1.1.0
         # or
-        $ npm install desityle@1.0.7 --save
+        $ npm install desityle@1.1.0 --save
         ```
     - Then Import in your libraries:
         ```js
@@ -98,5 +98,6 @@ Need any help? Have any Questions? Or just say us hi!
 
 1. [Drabkirn Website](https://go.cdadityang.xyz/drab)
 2. [Our Blog](https://go.cdadityang.xyz/blog)
-3. [Twitter](https://go.cdadityang.xyz/DtwtK)
-4. [Instagram](https://go.cdadityang.xyz/DinsK)
+3. [Discord Server](https://go.cdadityang.xyz/discord)
+4. [Twitter](https://go.cdadityang.xyz/DtwtK)
+5. [Instagram](https://go.cdadityang.xyz/DinsK)

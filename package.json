@@ -1,7 +1,7 @@
 {
   "name": "desityle",
-  "version": "1.0.7",
-  "description": "A Sleek and simple CSS Library that we use at Drabkirn and you can too",
+  "version": "1.1.0",
+  "description": "Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind.",
   "main": "index.js",
   "scripts": {
     "build": "gulp"
@@ -15,7 +15,6 @@
     "ui",
     "ux",
     "desityle",
-    "html",
     "css",
     "drabkirn"
   ],
