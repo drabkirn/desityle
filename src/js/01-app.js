@@ -1,5 +1,6 @@
 // ADD LICENSE HERE
 
+// Navbar configuration START
 document.addEventListener('DOMContentLoaded', () => {
   const htmlTag = document.querySelector('html');
 
@@ -36,3 +37,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+// Navbar configuration END
+
+
+// Pagination START
+document.addEventListener('DOMContentLoaded', () => {
+  const paginationLiATags = document.querySelectorAll('.pagination li a');
+
+  for (let i = 0; i < paginationLiATags.length; i++) {
+    paginationLiATags[i].addEventListener("click", () => {
+      paginationLiATags.forEach((aTag) => aTag.className = "");
+      paginationLiATags[i].className = "pagination-active";
+    });
+  } 
+});
+// Pagination END
