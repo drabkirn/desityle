@@ -7,7 +7,7 @@
 > Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind.
 
 <!-- Add CI/CD info, language, main frameworks used from shields.io. Example -->
-[![Desityle 1.1.0](https://img.shields.io/badge/Desityle-v1.1.0-green.svg)](https://www.npmjs.com/package/desityle)
+[![Desityle 1.1.2](https://img.shields.io/badge/Desityle-v1.1.2-green.svg)](https://www.npmjs.com/package/desityle)
 [![Issues](https://img.shields.io/github/issues/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Issues closed](https://img.shields.io/github/issues-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Pulls](https://img.shields.io/github/issues-pr/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/pulls)
@@ -35,17 +35,17 @@ Desityle is a sleek and straightforward DIY CSS library built from scratch with 
 1. **Using CDN on your static website:**
     - Just include our CSS and JS CDN files in your `index.html`(or any other `.html` file):
         ```html
-        <link rel="stylesheet" href="https://unpkg.com/desityle@1.1.0/build/css/desityle.min.css" />
+        <link rel="stylesheet" href="https://unpkg.com/desityle@1.1.2/build/css/desityle.min.css" />
 
-        <script src="https://unpkg.com/desityle@1.1.0/build/js/desityle.min.js"></script>
+        <script src="https://unpkg.com/desityle@1.1.2/build/js/desityle.min.js"></script>
         ```
 
 2. **Using in React or other JS Libraries/Frameworks:**
     - Install using NPM or Yarn:
         ```bash
-        $ yarn add desityle@1.1.0
+        $ yarn add desityle@1.1.2
         # or
-        $ npm install desityle@1.1.0 --save
+        $ npm install desityle@1.1.2 --save
         ```
     - Then Import in your libraries:
         ```js
