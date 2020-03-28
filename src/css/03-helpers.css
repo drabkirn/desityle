@@ -713,10 +713,12 @@
 /* Fonts Sizing START */
 .fs-1 {
   font-size: 1em;
+  line-height: 1;
 }
 
 .fs-1-2 {
   font-size: 1.2em;
+  line-height: 1.2;
 }
 
 .fs-1-4 {

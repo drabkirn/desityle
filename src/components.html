@@ -115,6 +115,7 @@
     <a href="#componentsContentSection" class="btn">Jumbos</a>
     <a href="#componentsContentSection" class="btn">Badgetags</a>
     <a href="#componentsContentSection" class="btn">Table</a>
+    <a href="#componentsContentSection" class="btn">TOC</a>
     <a href="#componentsContentSection" class="btn">Cards</a>
     <a href="#componentsContentSection" class="btn">Footer</a>
   </section>
@@ -678,21 +679,26 @@ This is standard P tag with float clearfix applied just above it.</p></xmp></cod
 
     <!-- Code snipets -->
     <div>
-      <div>
+      <div class="container">
         <p>This is code snippet. Syntax highlighting as per language is in draft specification. Currently, all the code is in light pink color: </p>
-  <pre><code><xmp>let firstVariable = "I am first Variable";
-  console.log(firstVariable);
-  </xmp></code></pre>
+        <pre><code><xmp>let firstVariable = "I am first Variable";
+console.log(firstVariable);
+</xmp></code></pre>
+      </div>
+
+      <div class="container">
+        <p>This is code snippet with language of the code specified:</p>
+        <pre class="pre-code"><span class="pre-code-span">ruby</span><code><xmp>a = [1, 2, 3, 4]
+b = [5, 6, 7, 8]
+a + b
+# => [1, 2, 3, 4, 5, 6]
+</xmp></code></pre>
       </div>
 
       <!-- Code for Above code snippet -->
       <div class="container mt-30">
-        <h3>Code for Above code snippet: </h3>
-        <pre><code><xmp><pre><code><xmp>
-let firstVariable = "I am first Variable";
-console.log(firstVariable);
-</xmp></code></pre>
-</xmp></code></pre>
+        <h3>Code for Above code snippets: </h3>
+        <p class="mt-10">We'll not be able to show you this demo here. But hey, we can show you <a href="#">here at our codepen</a>.</p>
       </div>
     </div>
 
@@ -1136,6 +1142,53 @@ console.log(firstVariable);
       </tr>
     </tbody>
   </table>
+</div></xmp></code></pre>
+      </div>
+    </div>
+
+    <!-- Table of contents: -->
+    <div>
+      <div class="container">
+        <ol class="ol-toc">
+          <li class="ol-toc-item">Introduction</li>
+          <li class="ol-toc-item">
+            <ol class="ol-toc-nested">
+              <li data-href="about-us">About Us</li>
+              <li data-href="know-more-about-us">Know more about us</li>
+            </ol>
+          </li>
+          <li class="ol-toc-item">Desityle</li>
+          <li class="ol-toc-item">
+            <ol class="ol-toc-nested">
+              <li data-href="di">Development Installation</li>
+              <li data-href="pi">Production Installation</li>
+            </ol>
+          </li>
+        </ol>
+
+        <p class="mt-40"><em>Table of contents requires you to have our Javascript file included. Read our <a href="https://drabkirn.cdadityang.xyz/docs/index.html#desityle" target="_blank" rel="noopener noreferrer">docs</a> on how to integrate our Javascript file. When you click on "About Us" section above, the user will be jumped to "#about-us" taken from "data-href" attribute.</em></p>
+      </div>
+
+      <!-- Code of Table of contents -->
+      <div class="container mt-20">
+          <h3>Code for Table of contents: </h3>
+          <pre><code><xmp><div class="container">
+  <ol class="ol-toc">
+    <li class="ol-toc-item">Introduction</li>
+    <li class="ol-toc-item">
+      <ol class="ol-toc-nested">
+        <li data-href="about-us">About Us</li>
+        <li data-href="know-more-about-us">Know more about us</li>
+      </ol>
+    </li>
+    <li class="ol-toc-item">Desityle</li>
+    <li class="ol-toc-item">
+      <ol class="ol-toc-nested">
+        <li data-href="di">Development Installation</li>
+        <li data-href="pi">Production Installation</li>
+      </ol>
+    </li>
+  </ol>
 </div></xmp></code></pre>
       </div>
     </div>

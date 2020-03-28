@@ -69,8 +69,8 @@ i, em {
   font-style: italic;
 }
 
-/* Links under p, u, i, b, em must be equalized */
-p > a, u > a, i > a, b > a, em > a {
+/* Links under p, u, i, b, em, blockquote and indent-lists must be equalized */
+p > a, u > a, i > a, b > a, em > a, blockquote > p, ol li ol, ul li ul, ol li ul, ol li a, ul li a {
   font-size: 1em;
 }
 
@@ -735,6 +735,93 @@ ul {
   background: var(--dark-red-color);
 }
 /* Pagination END */
+
+
+/* Code snippet START */
+.pre-code {
+  position: relative;
+}
+
+.pre-code .pre-code-span {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-radius: 20%;
+  background: var(--dark-red-color);
+  color: var(--light-white-color);
+}
+
+.pre-code code xmp {
+  margin-top: 15px;
+}
+/* Code snippet END */
+
+
+
+/* TOC START */
+.ol-toc {
+  list-style-type: none;
+  border: 2px solid var(--light-white-color);
+  font-size: 1.3em;
+  padding: 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.ol-toc .ol-toc-item {
+  padding-left: 1em;
+  border-bottom: 2px solid var(--light-white-color);
+}
+
+.ol-toc .ol-toc-item:nth-child(odd) {
+  color: pink;
+}
+
+.ol-toc .ol-toc-item:nth-child(odd):hover {
+  background: var(--dark-red-color);
+}
+
+.ol-toc .ol-toc-item:last-child {
+  border-bottom: none;
+}
+
+.ol-toc .ol-toc-item .ol-toc-nested {
+  list-style-type: none;
+  padding-left: 0;
+  border-left: 2px solid;
+}
+
+.ol-toc .ol-toc-item .ol-toc-nested li {
+  padding-left: 1em;
+  border-bottom: 2px solid var(--light-white-color);
+}
+
+.ol-toc .ol-toc-item .ol-toc-nested li:hover {
+  background: var(--light-white-color);
+  color: var(--light-black-color);
+}
+
+.ol-toc .ol-toc-item .ol-toc-nested li:last-child {
+  border-bottom: none;
+}
+
+/* Small Devices: Mobile */
+@media only screen and (max-width: 480px) {
+  .ol-toc {
+    width: 100%;
+    font-size: 1.2em;
+  }
+}
+
+/* Large Devices: Desktop */
+@media only screen and (min-width: 992px) {
+  .ol-toc {
+    width: 60%;
+  }
+}
+/* TOC END */
+
+
 
 /* Others START */
 .field-explanation {
