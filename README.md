@@ -8,6 +8,7 @@
 
 <!-- Add CI/CD info, language, main frameworks used from shields.io. Example -->
 [![Desityle 1.1.3](https://img.shields.io/badge/Desityle-v1.1.3-green.svg)](https://www.npmjs.com/package/desityle)
+[![Documentation](https://img.shields.io/badge/Documentation-red.svg)](https://go.cdadityang.xyz/DdocsS)
 [![Issues](https://img.shields.io/github/issues/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Issues closed](https://img.shields.io/github/issues-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Pulls](https://img.shields.io/github/issues-pr/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/pulls)
@@ -24,7 +25,6 @@ Desityle is a sleek and straightforward DIY CSS library built from scratch with 
 
 ## Table of Contents
 - [Usage](#usage)
-- [Installation](#installation)
 - [Contributing](#contributing)
 - [Connect](#connect)
 
@@ -32,53 +32,7 @@ Desityle is a sleek and straightforward DIY CSS library built from scratch with 
 -----
 
 ## Usage
-1. **Using CDN on your static website:**
-    - Just include our CSS and JS CDN files in your `index.html`(or any other `.html` file):
-        ```html
-        <link rel="stylesheet" href="https://unpkg.com/desityle@1.1.3/build/css/desityle.min.css" />
-
-        <script src="https://unpkg.com/desityle@1.1.3/build/js/desityle.min.js"></script>
-        ```
-
-2. **Using in React or other JS Libraries/Frameworks:**
-    - Install using NPM or Yarn:
-        ```bash
-        $ yarn add desityle@1.1.3
-        # or
-        $ npm install desityle@1.1.3 --save
-        ```
-    - Then Import in your libraries:
-        ```js
-        import 'desityle/build/css/desityle.min.css';
-        ```
-
------
------
-
-## Installation
-1. Clone this repo and `cd` into it:
-    ```bash
-    $ git clone https://github.com/drabkirn/desityle.git
-    $ cd desityle
-    ```
-
-2. Install all dependencies:
-    ```bash
-    yarn install --check-files
-    ```
-
-3. Build the react app:
-    ```bash
-    yarn build
-    # or `npm run build`
-    ```
-
-4. Serve you app from the `build/` folder created by the above command.
-    ```bash
-    cd build
-    # Example, to start on localhost:3002 or YOUR_IP:3002
-    python -m SimpleHTTPServer 3002
-    ```
+**We like to keep our GitHub repo clean and simple. So for usage and installation guides, please check out our [documentation here](https://go.cdadityang.xyz/DdocsS)**
 
 -----
 -----
