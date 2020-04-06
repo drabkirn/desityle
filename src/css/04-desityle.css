@@ -498,6 +498,7 @@ ul {
 
 .default-navbar ul li {
   padding-right: 15px;
+  font-size: 1.3em;
 }
 
 .fixed-navbar {
@@ -520,7 +521,11 @@ ul {
 
 .fixed-navbar .fixed-navbar-content ul li {
   padding: 15px 15px 0 0;
+  font-size: 1.3em;
+}
 
+.fixed-navbar-hamburger-links li, .default-navbar-hamburger-links li {
+  font-size: 1.3em;
 }
 
 /* Medium Devices: Tab */

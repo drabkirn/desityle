@@ -4,10 +4,10 @@
 
 # Drabkirn Desityle
 
-> Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind.
+> Desityle is a sleek and straightforward DIY CSS framework built from scratch with DIY(Do It Yourself) concept in mind.
 
 <!-- Add CI/CD info, language, main frameworks used from shields.io. Example -->
-[![Desityle 1.1.3](https://img.shields.io/badge/Desityle-v1.1.3-green.svg)](https://www.npmjs.com/package/desityle)
+[![Desityle 1.1.5](https://img.shields.io/badge/Desityle-v1.1.5-green.svg)](https://www.npmjs.com/package/desityle)
 [![Documentation](https://img.shields.io/badge/Documentation-red.svg)](https://go.cdadityang.xyz/DdocsS)
 [![Issues](https://img.shields.io/github/issues/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Issues closed](https://img.shields.io/github/issues-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
@@ -16,7 +16,7 @@
 [![License](https://img.shields.io/github/license/drabkirn/desityle.svg)](https://choosealicense.com/licenses/agpl-3.0/)
 [![CLA assistant](https://cla-assistant.io/readme/badge/drabkirn/desityle)](https://cla-assistant.io/drabkirn/desityle)
 
-Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind. Desityle helps you to make your websites look stunning neat and gloriously attractive. Our default mode is dark, thus eyes saving to the rescue. Check out what we've got for you in the bag:
+Desityle is a sleek and straightforward DIY CSS framework built from scratch with DIY(Do It Yourself) concept in mind. Desityle helps you to make your websites look stunning neat and gloriously attractive. Our default mode is dark, thus eyes saving to the rescue. Check out what we've got for you in the bag:
 
 **See Demo at: [https://go.cdadityang.xyz/style](https://go.cdadityang.xyz/style)**
 
@@ -47,11 +47,12 @@ Please check [this Code of Conduct guide](https://github.com/drabkirn/desityle/b
 
 -----
 
-## Connect:
+## Connect and explore:
 Need any help? Have any Questions? Or just say us hi!
 
 1. [Drabkirn Website](https://go.cdadityang.xyz/drab)
-2. [Our Blog](https://go.cdadityang.xyz/blog)
-3. [Discord Server](https://go.cdadityang.xyz/discord)
-4. [Twitter](https://go.cdadityang.xyz/DtwtK)
-5. [Instagram](https://go.cdadityang.xyz/DinsK)
+2. [Docs](https://go.cdadityang.xyz/docs)
+3. [Our Blog](https://go.cdadityang.xyz/blog)
+4. [Discord Server](https://go.cdadityang.xyz/discord)
+5. [Twitter](https://go.cdadityang.xyz/DtwtK)
+6. [Instagram](https://go.cdadityang.xyz/DinsK)
