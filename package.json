@@ -1,7 +1,7 @@
 {
   "name": "desityle",
-  "version": "1.1.3",
-  "description": "Desityle is a sleek and straightforward DIY CSS library built from scratch with DIY(Do It Yourself) concept in mind.",
+  "version": "1.1.5",
+  "description": "Desityle is a sleek and straightforward DIY CSS framework built from scratch with DIY(Do It Yourself) concept in mind.",
   "main": "index.js",
   "scripts": {
     "build": "gulp"
@@ -16,14 +16,15 @@
     "ux",
     "desityle",
     "css",
-    "drabkirn"
+    "drabkirn",
+    "framework"
   ],
   "author": "Drabkirn",
   "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/drabkirn/desityle/issues"
   },
-  "homepage": "https://github.com/drabkirn/desityle#readme",
+  "homepage": "https://drabkirn.cdadityang.xyz/desityle/index.html",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
