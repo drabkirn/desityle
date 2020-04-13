@@ -81,12 +81,13 @@ gulp.task('jsnonminify', gulp.series('clean', function() {
 // Take the HTML file, minify it with params below
 gulp.task('html', gulp.series('clean', function() {
   return gulp.src(globs.html)
-  .pipe(replace(`<link rel="stylesheet" href="css/01-css-reset.css">`, ''))
-  .pipe(replace(`<link rel="stylesheet" href="css/02-fonts.css">`, ''))
-  .pipe(replace(`<link rel="stylesheet" href="css/03-helpers.css">`, ''))
-  .pipe(replace(`<link rel="stylesheet" href="custom.css">`, ''))
-  .pipe(replace(`<link rel="stylesheet" href="css/04-desityle.css">`, '<link rel="stylesheet" href="css/desityle.min.css">'))
-  .pipe(replace(`<script src="./js/01-app.js"></script>`, '<script src="./js/desityle.min.js"></script>'))
+  .pipe(replace(`<link rel="stylesheet" href="./css/01-css-reset.css">`, ''))
+  .pipe(replace(`<link rel="stylesheet" href="./css/02-fonts.css">`, ''))
+  .pipe(replace(`<link rel="stylesheet" href="./css/03-helpers.css">`, ''))
+  .pipe(replace(`<link rel="stylesheet" href="./custom.css">`, ''))
+  .pipe(replace(`<link rel="stylesheet" href="./css/04-desityle.css">`, '<link rel="stylesheet" href="/desityle/css/desityle.min.css">'))
+  .pipe(replace(`<script src="./js/01-app.js"></script>`, '<script src="/desityle/js/desityle.min.js"></script>'))
+  .pipe(replace(`<a href="./components.html" class="btn wide-btn">Components</a>`, '<a href="/desityle/components" class="btn wide-btn">Components</a>'))
   .pipe(htmlmin({
     collapseWhitespace: true,
     removeComments: true,

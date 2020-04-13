@@ -1,3 +1,5 @@
 node_modules/
 # Local build folder
 /build
+# Ignore desityle build folder in src/
+/src/desityle

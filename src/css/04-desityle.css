@@ -192,6 +192,7 @@ ul {
 /* Default HTML Tags END */
 
 
+
 /* Button - btn START */
 .btn {
   font-family: "Montserrat", sans-serif;
@@ -234,6 +235,7 @@ ul {
 /* Button - btn END */
 
 
+
 /* Container START */
 .container, .form-container {
   padding-right: 15px;
@@ -243,7 +245,7 @@ ul {
 }
 
 /** Media Queries for container **/
-/* Medium Devices: Tab */
+/* Large Devices: Desktop */
 @media only screen and (min-width: 768px) {
   .container {
     width: 750px;
@@ -270,6 +272,7 @@ ul {
   }
 }
 /* Container END */
+
 
 
 /* Form START */
@@ -424,6 +427,7 @@ ul {
 /* Form END */
 
 
+
 /* Jumbos START */
 .jumbo {
   margin: 10px;
@@ -444,6 +448,8 @@ ul {
   color: var(--light-black-color)
 }
 /* Jumbos END */
+
+
 
 /* Badgetag START */
 .p-badgetag {
@@ -482,8 +488,9 @@ ul {
   background: var(--green-color);
   color: var(--light-white-color);
 }
-
 /* Badgetag END */
+
+
 
 /* Navbar START */
 .default-navbar {
@@ -528,7 +535,7 @@ ul {
   font-size: 1.3em;
 }
 
-/* Medium Devices: Tab */
+/* Small + Medium Devices: Mobile + Tab */
 @media only screen and (max-width: 768px) {
   .fixed-navbar .fixed-navbar-content {
     display: none;
@@ -583,32 +590,16 @@ ul {
     display: none;
   }
 }
-
 /* Navbar END */
 
 
-/* Main Intro/Header START */
-/* Large devices: Laptops */
-@media only screen and (min-width: 768px) {
-  .header-intro-mob {
-    display: none;
-  }
-}
-
-/* Medium Devices: Tab */
-@media only screen and (max-width: 768px) {
-  .header-intro-dsk {
-    display: none;
-  }
-}
-/* Main Intro/Header END */
 
 /* Footer START */
 .footer-baaaaaa p {
   font-size: 1em;
 }
 
-/* Medium Devices: Tab */
+/* Small + Medium Devices: Mobile + Tab */
 @media only screen and (max-width: 768px) {
   .footer-legal p {
     text-align: center;
@@ -620,6 +611,7 @@ ul {
   }
 }
 /* Footer END */
+
 
 
 /* Card START */
@@ -647,6 +639,7 @@ ul {
   border-bottom: none;
 }
 
+/* Small + Medium Devices: Mobile + Tab */
 @media only screen and (max-width: 768px) {
   .card {
     width: 98%;
@@ -718,6 +711,7 @@ ul {
 /* UL END */
 
 
+
 /* Pagination START */
 .pagination li {
   display: inline-block;
@@ -742,6 +736,7 @@ ul {
 /* Pagination END */
 
 
+
 /* Code snippet START */
 .pre-code {
   position: relative;
@@ -758,6 +753,12 @@ ul {
 
 .pre-code code xmp {
   margin-top: 15px;
+}
+
+.code-inline {
+  color: var(--light-pink-color);
+  font-size: 1em;
+  font-family: Courier, 'New Courier', monospace;
 }
 /* Code snippet END */
 
