@@ -109,6 +109,8 @@
     <a href="#componentsContentSection" class="btn">TOC</a>
     <a href="#componentsContentSection" class="btn">Cards</a>
     <a href="#componentsContentSection" class="btn">Images</a>
+    <a href="#componentsContentSection" class="btn">Videos</a>
+    <a href="#componentsContentSection" class="btn">Showcase</a>
     <a href="#componentsContentSection" class="btn">Footer</a>
   </section>
 
@@ -1326,7 +1328,7 @@ a + b
               <img src="./assets/drabkirn-logo-180x180.png" alt="drabkirn-logo" class="image-responsive image-click-fullscreen" />
             </div>
             <div class="col-dsk-6">
-              <img src="./assets/og_image.png" alt="og_image" class="image-responsive image-click-fullscreen" data-caption="This is the meta og image of the drabkirn desityle." />
+              <img src="./assets/nav-illustration.svg" alt="nav-illustration" class="image-responsive image-click-fullscreen" data-caption="This is the meta og image of the drabkirn desityle." />
             </div>
           </div>
         </div>
@@ -1355,6 +1357,135 @@ a + b
       <div class="container mt-30">
         <h3>Code for Videos: </h3>
         <pre><code><xmp><video src="./abc.mp4" class="video-responsive" controls></video></xmp></code></pre>
+      </div>
+    </div>
+
+    <!-- Showcase -->
+    <div>
+      <section class="container">
+        <div class="align-center section-header">
+          <h2>Product showcase</h2>
+          <u class="u-gold fs-1-2 font-italic">Below you can showcase your project with some images!</u>
+        </div>
+
+        <div class="section-content mt-70">
+          <div class="row showcase">
+            <div class="col-dsk-4 col-mob-12 mb-20 showcase-item">
+              <div class="align-center showcase-item-image">
+                <img src="./assets/nav-illustration.svg" alt="nav-illustration" class="image-responsive image-click-fullscreen" />
+              </div>
+              <div class="showcase-item-content">
+                <h3 class="align-center">Polish Green</h3>
+                <p>Click on above image to see fullscreen image. The default fullscreen.</p>
+              </div>
+            </div>
+            <div class="col-dsk-4 col-mob-12 mb-20 showcase-item">
+              <div class="align-center showcase-item-image">
+                <img src="./assets/nav-illustration.svg" alt="nav-illustration" class="image-responsive image-click-fullscreen" data-caption="You're seeing a full screen image with a caption like this." />
+              </div>
+              <div class="showcase-item-content">
+                <h3 class="align-center">Polish Red</h3>
+                <p>Click on above image to see full screen image with a caption with it.</p>
+              </div>
+            </div>
+            <div class="col-dsk-4 col-mob-12 mb-20 showcase-item">
+              <div class="align-center showcase-item-image">
+                <img src="./assets/nav-illustration.svg" alt="nav-illustration" class="image-responsive content-click-modal" />
+              </div>
+              <div class="showcase-item-content">
+                <h3 class="align-center">Polish Blue</h3>
+                <p>Click on above image to open a modal to include more info of the image.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="modal" id="modal">
+        <div class="modal-dialog" id="modal-dialog">
+          <div class="modal-dialog-header align-center mt-5 mb-20">
+            <h2>Polish Blue</h2>
+          </div>
+          <div class="modal-dialog-content">
+            <div class="align-center mb-20">
+              <img src="./assets/nav-illustration.svg" alt="nav-illustration" class="image-responsive">
+            </div>
+            <div>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et nisi, sint ullam enim soluta cum. Quas, voluptatum corrupti doloribus enim illum voluptatibus ipsam hic consequuntur eligendi quidem voluptates labore.Mollitia officiis commodi provident in consequuntur nesciunt quisquam perspiciatis temporibus fugiat veritatis quaerat odio cum rerum aperiam cumque, quia eos voluptates ipsa voluptatem earum ratione, quos sit possimus. Necessitatibus, repellat!
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div class="modal-dialog-footer align-right">
+            <button class="btn" id="modal-close">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code for Showcase -->
+      <div class="container mt-30">
+        <h3>Code for Showcase: </h3>
+        <p class="mt-20 font-italic fs-1-2">Whenever you use a <code class="code-inline">content-click-modal</code> class, you'll need to add a modal at the bottom of your page. If you use multiple <code class="code-inline">content-click-modal</code> classes, then these modals must in proper order at the bottom of the page, i.e. each <code class="code-inline">content-click-modal</code> class will correspond to respective modal.</p>
+        <pre><code><xmp><div class="container">
+  <div class="row showcase">
+    <div class="col-dsk-4 col-mob-12 mb-20 showcase-item">
+      <div class="align-center showcase-item-image">
+        <img src="./abc.png" alt="my abc image" class="image-responsive image-click-fullscreen" />
+      </div>
+      <div class="showcase-item-content">
+        <h3 class="align-center">Polish Green</h3>
+        <p>Click on above image to see fullscreen image. The default fullscreen.</p>
+      </div>
+    </div>
+    <div class="col-dsk-4 col-mob-12 mb-20 showcase-item">
+      <div class="align-center showcase-item-image">
+        <img src="./abc.png" alt="my abc image" class="image-responsive image-click-fullscreen"
+          data-caption="You're seeing a full screen image with a caption like this." />
+      </div>
+      <div class="showcase-item-content">
+        <h3 class="align-center">Polish Red</h3>
+        <p>Click on above image to see full screen image with a caption with it.</p>
+      </div>
+    </div>
+    <div class="col-dsk-4 col-mob-12 mb-20 showcase-item">
+      <div class="align-center showcase-item-image">
+        <img src="./abc.png" alt="my abc image" class="image-responsive content-click-modal" />
+      </div>
+      <div class="showcase-item-content">
+        <h3 class="align-center">Polish Blue</h3>
+        <p>Click on above image to open a modal to include more info of the image.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="modal">
+  <div class="modal-dialog" id="modal-dialog">
+    <div class="modal-dialog-header align-center mt-5 mb-20">
+      <h2>Polish Blue</h2>
+    </div>
+    <div class="modal-dialog-content">
+      <div class="align-center mb-20">
+        <img src="https://picsum.photos/600" alt="og_image" class="image-responsive">
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex et nisi, sint ullam enim soluta cum.
+          Quas, voluptatum corrupti doloribus enim illum voluptatibus ipsam hic consequuntur eligendi quidem
+          voluptates labore.Mollitia officiis commodi provident in consequuntur nesciunt quisquam perspiciatis
+          temporibus fugiat veritatis quaerat odio cum rerum aperiam cumque, quia eos voluptates ipsa voluptatem
+          earum ratione, quos sit possimus. Necessitatibus, repellat!
+        </p>
+      </div>
+    </div>
+    <hr />
+    <div class="modal-dialog-footer align-right">
+      <button class="btn" id="modal-close">Close</button>
+    </div>
+  </div>
+</div></xmp></code></pre>
       </div>
     </div>
 

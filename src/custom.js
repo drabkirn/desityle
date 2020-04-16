@@ -118,3 +118,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 // Image Click fullscreen Demo END
+
+
+
+// Content click modal Demo START
+document.addEventListener('DOMContentLoaded', () => {
+  const allContentClickModals = document.querySelectorAll('.content-click-modal');
+  const allModals = document.querySelectorAll('.modal');
+
+  const body = document.querySelector('body');
+
+  let isModalOpened = false;
+  let modalNumber;
+
+  for (let i = 0; i < allModals.length; i++) {
+    allContentClickModals[i].addEventListener('click', () => {
+      body.style.overflow = "hidden";
+      allModals[i].style.display = "block";
+      modalNumber = i;
+      isModalOpened = true;
+      window.location.href = "#modal-dialog";
+    });
+
+    allModals[i].addEventListener('click', (e) => {
+      if(isModalOpened) {
+        if(e.target.id === "modal" || e.target.id === "modal-close") {
+          body.style.overflow = "auto";
+          allModals[modalNumber].style.display = "none";
+          isModalOpened = false;
+          window.location.href = "#componentsContentSection";
+        }
+      }
+    });
+  }
+});
+// Content click modal Demo END
