@@ -66,3 +66,55 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 // TOC Demo END
+
+
+
+// Image Click fullscreen Demo START
+document.addEventListener('DOMContentLoaded', () => {
+  const allImageClickFullscreen = document.querySelectorAll('.image-click-fullscreen');
+
+  const body = document.querySelector('body');
+
+  let isImageFullscreenOpen = false;
+
+  for(let i = 0; i < allImageClickFullscreen.length; i++) {
+    allImageClickFullscreen[i].addEventListener('click', (e) => {
+      const createImageFullscreenOverlay = document.createElement("div");
+      const createNestedImageFullscreenOverlay = document.createElement("div");
+
+      createImageFullscreenOverlay.className = "image-fullscreen-overlay align-center";
+
+      createNestedImageFullscreenOverlay.className = "image-fullscreen-nested-overlay";
+
+      let imageInsideFullscreenOverlay = e.target.cloneNode(true);
+      imageInsideFullscreenOverlay.className = "image-inside-fullscreen-overlay";
+
+      createNestedImageFullscreenOverlay.innerHTML = imageInsideFullscreenOverlay.outerHTML;
+
+      if(allImageClickFullscreen[i].dataset.caption) {
+        const caption = allImageClickFullscreen[i].dataset.caption;
+        const spanCaption = document.createElement("span");
+        const br = document.createElement("br");
+        const br2 = document.createElement("br");
+        spanCaption.className = "fs-1-2 font-italic";
+        spanCaption.innerText = caption;
+        createNestedImageFullscreenOverlay.appendChild(br);
+        createNestedImageFullscreenOverlay.appendChild(br2);
+        createNestedImageFullscreenOverlay.appendChild(spanCaption);
+      }
+
+      createImageFullscreenOverlay.appendChild(createNestedImageFullscreenOverlay);
+      e.target.parentElement.appendChild(createImageFullscreenOverlay);
+
+      body.style.overflow = "hidden";
+      isImageFullscreenOpen = true;
+
+      createImageFullscreenOverlay.addEventListener('click', (e1) => {
+        createImageFullscreenOverlay.remove();
+        body.style.overflow = "scroll";
+        isImageFullscreenOpen = false;
+      });
+    });
+  }
+});
+// Image Click fullscreen Demo END

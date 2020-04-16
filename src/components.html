@@ -88,6 +88,7 @@
   <section id="allBtnsSection" class="container mt-30 align-center">
     <a href="#componentsContentSection" class="btn">Navbar</a>
     <a href="#componentsContentSection" class="btn">Header</a>
+    <a href="#componentsContentSection" class="btn">Section</a>
     <a href="#componentsContentSection" class="btn">Buttons</a>
     <a href="#componentsContentSection" class="btn">Header Tags</a>
     <a href="#componentsContentSection" class="btn">p Tags</a>
@@ -107,6 +108,7 @@
     <a href="#componentsContentSection" class="btn">Table</a>
     <a href="#componentsContentSection" class="btn">TOC</a>
     <a href="#componentsContentSection" class="btn">Cards</a>
+    <a href="#componentsContentSection" class="btn">Images</a>
     <a href="#componentsContentSection" class="btn">Footer</a>
   </section>
 
@@ -216,6 +218,61 @@
 
   <hr />
 </header></xmp></code></pre>
+      </div>
+    </div>
+
+    <!-- Section -->
+    <div>
+      <section>
+        <div class="align-center section-header">
+          <h2>Section Header</h2>
+          <u class="u-gold fs-1-2 font-italic">Explain about the purpose of this section here in 1-2 lines. This section is without using a <code class="code-inline">.container</code> class.</u>
+        </div>
+
+        <div class="section-content mt-40">
+          <p>This is the section content. There is no <code class="code-inline">.container</code> class for this.</p>
+        </div>
+      </section>
+
+      <hr />
+
+      <section class="container">
+        <div class="align-center section-header">
+          <h2>Section Header</h2>
+          <u class="u-gold fs-1-2 font-italic">Explain about the purpose of this section here in 1-2 lines. This section includes <code class="code-inline">.container</code> class.</u>
+        </div>
+
+        <div class="section-content mt-40">
+          <p>This is the section content. There is a <code class="code-inline">.container</code> class for this.</p>
+        </div>
+      </section>
+
+      <div class="container mt-30">
+        <h3>Code for Section without container</h3>
+        <pre><code><xmp><section>
+  <div class="align-center section-header">
+    <h2>Section Header</h2>
+    <u class="u-gold fs-1-2 font-italic">Explain about the purpose of this section here in 1-2 lines. This section is without using a <code class="code-inline">.container</code> class.</u>
+  </div>
+
+  <div class="section-content mt-40">
+    <p>This is the section content. There is no <code class="code-inline">.container</code> class for this.</p>
+  </div>
+</section></xmp></code></pre>
+      </div>
+
+      <div class="container mt-30">
+        <h3>Code for Section with a container</h3>
+        <pre><code><xmp><section class="container">
+  <div class="align-center section-header">
+    <h2>Section Header</h2>
+    <u class="u-gold fs-1-2 font-italic">Explain about the purpose of this section here in 1-2 lines. This section includes <code class="code-inline">.container</code> class.</u>
+  </div>
+
+  <div class="section-content mt-40">
+    <p>This is the section content. There is a <code class="code-inline">.container</code> class for this.</p>
+  </div>
+</section></xmp></code></pre>
       </div>
     </div>
 
@@ -680,184 +737,190 @@ a + b
 
     <!-- Forms -->
     <div>
-      <div class="form-container">
-        <form action="#" class="form-tag">
-          <div class="form-header align-center">
-            <h2>Form Header</h2>
-            <u class="form-header-explanation u-gold">Explain about the purpose of this form here. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</u>
-          </div>
-          <div class="form-field">
-            <label for="email" class="form-field-label">Email: </label>
-            <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-            <input type="email" class="form-field-input" id="email" required />
-          </div>
-
-          <div class="form-field">
-            <label for="password" class="form-field-label">Password: </label>
-            <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-            <input type="password" class="form-field-input" id="password" minlength="6" maxlength="15" required />
-          </div>
-
-          <div class="form-field">
-            <label for="body" class="form-field-label">Body: </label>
-            <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-            <textarea class="form-field-input form-field-textarea" id="body" rows="5" minlength="6" required placeholder="Hello World, this is a text area..."></textarea>
-          </div>
-
-          <div class="form-field form-field-checkboxes">
-            <label class="form-field-label">Checkboxes: </label>
-            <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-            <label class="form-field-label-checkbox">
-              Checkbox One
-              <input class="form-field-checkbox" type="checkbox" checked="checked" value="one" name="checkbox1">
-              <span class="form-field-checkmark"></span>
-            </label>
-
-            <label class="form-field-label-checkbox">
-              Checkbox Two
-              <input class="form-field-checkbox" type="checkbox" value="two" name="checkbox1">
-              <span class="form-field-checkmark"></span>
-            </label>
-
-            <label class="form-field-label-checkbox">
+      <section class="container">
+        <div class="align-center section-header">
+          <h2>Form Header</h2>
+          <u class="u-gold fs-1-2 font-italic">Explain about the purpose of this form here. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</u>
+        </div>
+      
+        <div class="form-container">
+          <form action="#" class="form-tag">
+            <div class="form-field">
+              <label for="email" class="form-field-label">Email: </label>
+              <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+              <input type="email" class="form-field-input" id="email" required />
+            </div>
+      
+            <div class="form-field">
+              <label for="password" class="form-field-label">Password: </label>
+              <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+              <input type="password" class="form-field-input" id="password" minlength="6" maxlength="15" required />
+            </div>
+      
+            <div class="form-field">
+              <label for="body" class="form-field-label">Body: </label>
+              <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+              <textarea class="form-field-input form-field-textarea" id="body" rows="5" minlength="6" required placeholder="Hello World, this is a text area..."></textarea>
+            </div>
+      
+            <div class="form-field form-field-checkboxes">
+              <label class="form-field-label">Checkboxes: </label>
+              <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+              <label class="form-field-label-checkbox">
+                Checkbox One
+                <input class="form-field-checkbox" type="checkbox" checked="checked" value="one" name="checkbox1">
+                <span class="form-field-checkmark"></span>
+              </label>
+      
+              <label class="form-field-label-checkbox">
+                Checkbox Two
+                <input class="form-field-checkbox" type="checkbox" value="two" name="checkbox1">
+                <span class="form-field-checkmark"></span>
+              </label>
+      
+              <label class="form-field-label-checkbox">
                 Checkbox Three
                 <input class="form-field-checkbox" type="checkbox" value="three" name="checkbox1">
                 <span class="form-field-checkmark"></span>
               </label>
-          </div>
-
-          <div class="form-field form-field-radios">
-            <label class="form-field-label">Radio: </label>
-            <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-            <label class="form-field-label-radio">
-              Radio One
-              <input class="form-field-radio" type="radio" checked="checked" value="one" name="radio1">
-              <span class="form-field-radiomark"></span>
-            </label>
-
-            <label class="form-field-label-radio">
-              Radio Two
-              <input class="form-field-radio" type="radio" value="two" name="radio1">
-              <span class="form-field-radiomark"></span>
-            </label>
-
-            <label class="form-field-label-radio">
-              Radio Three
-              <input class="form-field-radio" type="radio" value="three" name="radio1">
-              <span class="form-field-radiomark"></span>
-            </label>
-          </div>
-
-          <div class="form-field">
-            <label for="select" class="form-field-label">Select: </label>
-            <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-            <select id="select" class="form-field-select">
-              <option value="0">Select your option:</option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-              <option value="4">Option 4</option>
-              <option value="5">Option 5</option>
-            </select>
-            <span class="form-field-select-checkmark"></span>
-          </div>
-
-          <div class="form-footer align-center mt-40">
-            <button class="btn wide-btn submit-btn">Submit</button>
-          </div>
-        </form>
-      </div>
+            </div>
+      
+            <div class="form-field form-field-radios">
+              <label class="form-field-label">Radio: </label>
+              <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+              <label class="form-field-label-radio">
+                Radio One
+                <input class="form-field-radio" type="radio" checked="checked" value="one" name="radio1">
+                <span class="form-field-radiomark"></span>
+              </label>
+      
+              <label class="form-field-label-radio">
+                Radio Two
+                <input class="form-field-radio" type="radio" value="two" name="radio1">
+                <span class="form-field-radiomark"></span>
+              </label>
+      
+              <label class="form-field-label-radio">
+                Radio Three
+                <input class="form-field-radio" type="radio" value="three" name="radio1">
+                <span class="form-field-radiomark"></span>
+              </label>
+            </div>
+      
+            <div class="form-field">
+              <label for="select" class="form-field-label">Select: </label>
+              <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+              <select id="select" class="form-field-select">
+                <option value="0">Select your option:</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+                <option value="5">Option 5</option>
+              </select>
+              <span class="form-field-select-checkmark"></span>
+            </div>
+      
+            <div class="form-footer align-center mt-40">
+              <button class="btn wide-btn submit-btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </section>
 
       <!-- Code for Forms -->
       <div class="container mt-30">
         <h3>Code for Forms: </h3>
-        <pre><code><xmp><div class="form-container">
-  <form action="#" class="form-tag">
-    <div class="form-header align-center">
-      <h2>Form Header</h2>
-      <u class="form-header-explanation u-gold">Explain about the purpose of this form here. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</u>
-    </div>
-    <div class="form-field">
-      <label for="email" class="form-field-label">Email: </label>
-      <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-      <input type="email" class="form-field-input" id="email" required />
-    </div>
+        <pre><code><xmp><section class="container">
+  <div class="align-center section-header">
+    <h2>Form Header</h2>
+    <u class="u-gold fs-1-2 font-italic">Explain about the purpose of this form here. Lorem ipsum, dolor sit amet consectetur adipisicing elit.</u>
+  </div>
 
-    <div class="form-field">
-      <label for="password" class="form-field-label">Password: </label>
-      <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-      <input type="password" class="form-field-input" id="password" minlength="6" maxlength="15" required />
-    </div>
+  <div class="form-container">
+    <form action="#" class="form-tag">
+      <div class="form-field">
+        <label for="email" class="form-field-label">Email: </label>
+        <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+        <input type="email" class="form-field-input" id="email" required />
+      </div>
 
-    <div class="form-field">
-      <label for="body" class="form-field-label">Body: </label>
-      <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-      <textarea class="form-field-input form-field-textarea" id="body" rows="5" minlength="6" required placeholder="Hello World, this is a text area..."></textarea>
-    </div>
+      <div class="form-field">
+        <label for="password" class="form-field-label">Password: </label>
+        <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+        <input type="password" class="form-field-input" id="password" minlength="6" maxlength="15" required />
+      </div>
 
-    <div class="form-field form-field-checkboxes">
-      <label class="form-field-label">Checkboxes: </label>
-      <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-      <label class="form-field-label-checkbox">
-        Checkbox One
-        <input class="form-field-checkbox" type="checkbox" checked="checked" value="one" name="checkbox1">
-        <span class="form-field-checkmark"></span>
-      </label>
+      <div class="form-field">
+        <label for="body" class="form-field-label">Body: </label>
+        <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+        <textarea class="form-field-input form-field-textarea" id="body" rows="5" minlength="6" required placeholder="Hello World, this is a text area..."></textarea>
+      </div>
 
-      <label class="form-field-label-checkbox">
-        Checkbox Two
-        <input class="form-field-checkbox" type="checkbox" value="two" name="checkbox1">
-        <span class="form-field-checkmark"></span>
-      </label>
+      <div class="form-field form-field-checkboxes">
+        <label class="form-field-label">Checkboxes: </label>
+        <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+        <label class="form-field-label-checkbox">
+          Checkbox One
+          <input class="form-field-checkbox" type="checkbox" checked="checked" value="one" name="checkbox1">
+          <span class="form-field-checkmark"></span>
+        </label>
 
-      <label class="form-field-label-checkbox">
+        <label class="form-field-label-checkbox">
+          Checkbox Two
+          <input class="form-field-checkbox" type="checkbox" value="two" name="checkbox1">
+          <span class="form-field-checkmark"></span>
+        </label>
+
+        <label class="form-field-label-checkbox">
           Checkbox Three
           <input class="form-field-checkbox" type="checkbox" value="three" name="checkbox1">
           <span class="form-field-checkmark"></span>
         </label>
-    </div>
+      </div>
 
-    <div class="form-field form-field-radios">
-      <label class="form-field-label">Radio: </label>
-      <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-      <label class="form-field-label-radio">
-        Radio One
-        <input class="form-field-radio" type="radio" checked="checked" value="one" name="radio1">
-        <span class="form-field-radiomark"></span>
-      </label>
+      <div class="form-field form-field-radios">
+        <label class="form-field-label">Radio: </label>
+        <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+        <label class="form-field-label-radio">
+          Radio One
+          <input class="form-field-radio" type="radio" checked="checked" value="one" name="radio1">
+          <span class="form-field-radiomark"></span>
+        </label>
 
-      <label class="form-field-label-radio">
-        Radio Two
-        <input class="form-field-radio" type="radio" value="two" name="radio1">
-        <span class="form-field-radiomark"></span>
-      </label>
+        <label class="form-field-label-radio">
+          Radio Two
+          <input class="form-field-radio" type="radio" value="two" name="radio1">
+          <span class="form-field-radiomark"></span>
+        </label>
 
-      <label class="form-field-label-radio">
-        Radio Three
-        <input class="form-field-radio" type="radio" value="three" name="radio1">
-        <span class="form-field-radiomark"></span>
-      </label>
-    </div>
+        <label class="form-field-label-radio">
+          Radio Three
+          <input class="form-field-radio" type="radio" value="three" name="radio1">
+          <span class="form-field-radiomark"></span>
+        </label>
+      </div>
 
-    <div class="form-field">
-      <label for="select" class="form-field-label">Select: </label>
-      <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
-      <select id="select" class="form-field-select">
-        <option value="0">Select your option:</option>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-        <option value="4">Option 4</option>
-        <option value="5">Option 5</option>
-      </select>
-      <span class="form-field-select-checkmark"></span>
-    </div>
+      <div class="form-field">
+        <label for="select" class="form-field-label">Select: </label>
+        <p class="form-field-explanation">Explain about this form field here. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit harum aspernatur maxime sunt voluptatum!</p>
+        <select id="select" class="form-field-select">
+          <option value="0">Select your option:</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <option value="4">Option 4</option>
+          <option value="5">Option 5</option>
+        </select>
+        <span class="form-field-select-checkmark"></span>
+      </div>
 
-    <div class="form-footer align-center mt-40">
-      <button class="btn wide-btn submit-btn">Submit</button>
-    </div>
-  </form>
-</div></xmp></code></pre>
+      <div class="form-footer align-center mt-40">
+        <button class="btn wide-btn submit-btn">Submit</button>
+      </div>
+    </form>
+  </div>
+</section></xmp></code></pre>
       </div>
     </div>
 
@@ -1242,6 +1305,59 @@ a + b
       </div>
     </div>
 
+    <!-- Images -->
+    <div>
+      <div class="container images-demo">
+        <div class="align-center">
+          <p><em>Below is a responsive image, try re-sizing the window!</em></p>
+          <br />
+          <img src="./assets/og_image.png" alt="og_image" class="image-responsive" />
+        </div>
+
+        <hr />
+      </div>
+
+      <div class="container images-demo">
+        <div class="align-center">
+          <p><em>Below are also a responsive images, but will enlarge to their original size when clicked! Find out which image has a caption.</em></p>
+
+          <div class="row mt-50">
+            <div class="col-dsk-6">
+              <img src="./assets/drabkirn-logo-180x180.png" alt="drabkirn-logo" class="image-responsive image-click-fullscreen" />
+            </div>
+            <div class="col-dsk-6">
+              <img src="./assets/og_image.png" alt="og_image" class="image-responsive image-click-fullscreen" data-caption="This is the meta og image of the drabkirn desityle." />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code for images -->
+      <div class="container mt-30">
+        <h3>Code for Images: </h3>
+        <pre><code><xmp><img src="./abc.png" alt="my abc image" class="image-responsive" />
+
+<img src="./abc.png" alt="my abc image" class="image-responsive image-click-fullscreen" />
+
+<img src="./abc.png" alt="my abc image" class="image-responsive image-click-fullscreen"
+    data-caption="This is the caption, with green background below the image fullscreen." />
+</xmp></code></pre>
+      </div>
+    </div>
+
+    <!-- Videos -->
+    <div>
+      <div class="container">
+        <p>We want to keep our website clean and heavy-free, so we'll show you this demo <a href="https://codepen.io/drabkirn/pen/BaojbeR?editors=1010" target="_blank" rel="noopener noreferrer">here at our codepen</a>.</p>
+      </div>
+
+      <!-- Code for videos -->
+      <div class="container mt-30">
+        <h3>Code for Videos: </h3>
+        <pre><code><xmp><video src="./abc.mp4" class="video-responsive" controls></video></xmp></code></pre>
+      </div>
+    </div>
+
     <!-- Footer -->
     <div>
       <div class="container mt-30 mb-30">
@@ -1256,7 +1372,6 @@ a + b
       <a href="#" class="mr-10">DEF</a>
     </div>
   </div>
-  <div class="float-clearfix"></div>
   <div class="footer-baaaaaa">
     <p class="align-center"><i>@Baaaaaa</i></p>
   </div>
@@ -1267,7 +1382,7 @@ a + b
 
   <!-- Footer -->
   <footer class="mt-100">
-    <div class="footer-legal">
+    <div class="row footer-legal">
       <div class="col-dsk-6 col-mob-12 pl-20">
         <p>Copyrights &copy;, 2019-2020 - <a href="/">Drabkirn</a></p>
       </div>
@@ -1277,7 +1392,6 @@ a + b
         <a href="mailto:drabkirn@cdadityang.xyz" class="mr-10">Contact</a>
       </div>
     </div>
-    <div class="float-clearfix"></div>
     <div class="footer-baaaaaa">
       <p class="align-center"><i>@Baaaaaa</i></p>
     </div>
