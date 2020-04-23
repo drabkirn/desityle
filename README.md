@@ -7,7 +7,7 @@
 > Desityle is a sleek and straightforward DIY CSS framework built from scratch with DIY(Do It Yourself) concept in mind.
 
 <!-- Add CI/CD info, language, main frameworks used from shields.io. Example -->
-[![Desityle 1.1.9](https://img.shields.io/badge/Desityle-v1.1.9-green.svg)](https://www.npmjs.com/package/desityle)
+[![Desityle 1.2.0](https://img.shields.io/badge/Desityle-v1.2.0-green.svg)](https://www.npmjs.com/package/desityle)
 [![Documentation](https://img.shields.io/badge/Documentation-red.svg)](https://go.cdadityang.xyz/DdocsS)
 [![Issues](https://img.shields.io/github/issues/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
 [![Issues closed](https://img.shields.io/github/issues-closed/drabkirn/desityle.svg)](https://github.com/drabkirn/desityle/issues)
@@ -25,6 +25,7 @@ Desityle is a sleek and straightforward DIY CSS framework built from scratch wit
 
 ## Table of Contents
 - [Usage](#usage)
+- [Supported Browsers](#supported-browsers)
 - [Contributing](#contributing)
 - [Connect](#connect)
 
@@ -33,6 +34,19 @@ Desityle is a sleek and straightforward DIY CSS framework built from scratch wit
 
 ## Usage
 **We like to keep our GitHub repo clean and simple. So for usage and installation guides, please check out our [documentation here](https://go.cdadityang.xyz/DdocsS)**
+
+-----
+-----
+
+## Supported Browsers
+Desityle works smoothly and elegantly with:
+  - IE 11+
+  - Edge 12+
+  - Firefox 35+
+  - Chrome 44+
+  - Safari 9+
+  - Opera 40+
+  - IOS 9+
 
 -----
 -----

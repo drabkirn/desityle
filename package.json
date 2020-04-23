@@ -1,6 +1,6 @@
 {
   "name": "desityle",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "description": "Desityle is a sleek and straightforward DIY CSS framework built from scratch with DIY(Do It Yourself) concept in mind.",
   "main": "index.js",
   "scripts": {

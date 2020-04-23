@@ -1,0 +1,10 @@
+# Supported browsers
+
+> 4%
+ie >= 11,
+edge >= 12,
+ff >= 35,
+chrome >= 44,
+safari >= 9,
+opera >= 40
+ios >= 9

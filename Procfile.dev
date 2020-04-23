@@ -1,0 +1,2 @@
+web: cd ./src && python -m SimpleHTTPServer 3004
+sass: cd ./src && sass --watch ./scss/desityle.scss ./css/03-desityle.css

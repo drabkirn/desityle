@@ -2,7 +2,7 @@
 
 
 // Navbar configuration START
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const htmlTag = document.querySelector('html');
 
   const fixedNavbar = document.querySelector('.fixed-navbar');
@@ -13,8 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const defaultNavbarHamburgerMenuButton = document.querySelector('.default-navbar-hamburger a');
     const defaultNavbarHamburgerMenuAllLinks = document.querySelector('.default-navbar-hamburger .default-navbar-hamburger-links');
 
+    const fixedNavbarHamburgerMenuEachLinks = document.querySelectorAll('.fixed-navbar-hamburger .fixed-navbar-hamburger-links li a');
+    const defaultNavbarHamburgerMenuEachLinks = document.querySelectorAll('.default-navbar-hamburger .default-navbar-hamburger-links li a');
+
+
     // Navbar Scroll
-    document.addEventListener('scroll', () => {
+    document.addEventListener('scroll', function() {
       if(htmlTag.scrollTop > 70) {
         fixedNavbar.style.display = "block";
       }
@@ -24,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Navbar Hamburgers
-    fixedNavbarHamburgerMenuButton.addEventListener('click', () => {
+    fixedNavbarHamburgerMenuButton.addEventListener('click', function() {
       if (fixedNavbarHamburgerMenuAllLinks.style.display === "block") {
         fixedNavbarHamburgerMenuAllLinks.style.display = "none";
       } else {
@@ -32,13 +36,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    defaultNavbarHamburgerMenuButton.addEventListener('click', () => {
+    for(let i = 0; i < fixedNavbarHamburgerMenuEachLinks.length; i++) {
+      (function() {
+        let temp = i;
+
+        fixedNavbarHamburgerMenuEachLinks[temp].addEventListener('click', function() {
+          fixedNavbarHamburgerMenuAllLinks.style.display = "none";
+        });
+      }());
+    }
+
+    defaultNavbarHamburgerMenuButton.addEventListener('click', function() {
       if (defaultNavbarHamburgerMenuAllLinks.style.display === "block") {
         defaultNavbarHamburgerMenuAllLinks.style.display = "none";
       } else {
         defaultNavbarHamburgerMenuAllLinks.style.display = "block";
       }
     });
+
+    for(let i = 0; i < defaultNavbarHamburgerMenuEachLinks.length; i++) {
+      (function() {
+        let temp = i;
+
+        defaultNavbarHamburgerMenuEachLinks[temp].addEventListener('click', function() {
+          defaultNavbarHamburgerMenuAllLinks.style.display = "none";
+        });
+      }());
+    }
   }
 });
 // Navbar configuration END
@@ -46,15 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Pagination START
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const paginationLiATags = document.querySelectorAll('.pagination li a');
 
   if(paginationLiATags) {
     for (let i = 0; i < paginationLiATags.length; i++) {
-      paginationLiATags[i].addEventListener("click", () => {
-        paginationLiATags.forEach((aTag) => aTag.className = "");
-        paginationLiATags[i].className = "pagination-active";
-      });
+      (function(){
+        let temp = i;
+        paginationLiATags[temp].addEventListener("click", function() {
+          for(let j = 0; j < paginationLiATags.length; j++) {
+            paginationLiATags[j].className = "";
+          }
+          paginationLiATags[temp].className = "pagination-active";
+        });
+      }()); // Run immediately - IE Support
     } 
   }
 });
@@ -63,25 +92,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // TOC START
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const mainLi = document.querySelectorAll('.ol-toc .ol-toc-item:nth-child(odd)');
   const nestedLi = document.querySelectorAll('.ol-toc .ol-toc-item .ol-toc-nested li');
 
   if(mainLi) {
     for(let i = 0; i < mainLi.length; i++) {
-      let nextEle = mainLi[i].nextElementSibling;
-      nextEle.style.display = "none";
-      
-      mainLi[i].addEventListener('click', () => {
-        if(nextEle.style.display === "none") nextEle.style.display = "block";
-        else nextEle.style.display = "none";
-      });
+      (function() {
+        let temp = i;
+
+        let nextEle = mainLi[temp].nextElementSibling;
+        nextEle.style.display = "none";
+
+        mainLi[temp].addEventListener('click', function() {
+          if(nextEle.style.display === "none") nextEle.style.display = "block";
+          else nextEle.style.display = "none";
+        });
+      }()); // Run immediately - IE Support
     }
 
     for(let i = 0; i < nestedLi.length; i++) {
-      nestedLi[i].addEventListener('click', () => {
-        window.location.href = nestedLi[i].dataset.href;
-      });
+      (function(){
+        let temp = i;
+        nestedLi[temp].addEventListener('click', function() {
+          window.location.href = nestedLi[temp].dataset.href;
+        });
+      }()); // Run immediately - IE Support
     }
   }
 });
@@ -90,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Image Click fullscreen START
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const allImageClickFullscreen = document.querySelectorAll('.image-click-fullscreen');
 
   const body = document.querySelector('body');
@@ -98,43 +134,47 @@ document.addEventListener('DOMContentLoaded', () => {
   let isImageFullscreenOpen = false;
 
   for(let i = 0; i < allImageClickFullscreen.length; i++) {
-    allImageClickFullscreen[i].addEventListener('click', (e) => {
-      const createImageFullscreenOverlay = document.createElement("div");
-      const createNestedImageFullscreenOverlay = document.createElement("div");
+    (function() {
+      let temp = i;
 
-      createImageFullscreenOverlay.className = "image-fullscreen-overlay align-center";
-
-      createNestedImageFullscreenOverlay.className = "image-fullscreen-nested-overlay";
-
-      let imageInsideFullscreenOverlay = e.target.cloneNode(true);
-      imageInsideFullscreenOverlay.className = "image-inside-fullscreen-overlay";
-
-      createNestedImageFullscreenOverlay.innerHTML = imageInsideFullscreenOverlay.outerHTML;
-
-      if(allImageClickFullscreen[i].dataset.caption) {
-        const caption = allImageClickFullscreen[i].dataset.caption;
-        const spanCaption = document.createElement("span");
-        const br = document.createElement("br");
-        const br2 = document.createElement("br");
-        spanCaption.className = "fs-1-2 font-italic";
-        spanCaption.innerText = caption;
-        createNestedImageFullscreenOverlay.appendChild(br);
-        createNestedImageFullscreenOverlay.appendChild(br2);
-        createNestedImageFullscreenOverlay.appendChild(spanCaption);
-      }
-
-      createImageFullscreenOverlay.appendChild(createNestedImageFullscreenOverlay);
-      e.target.parentElement.appendChild(createImageFullscreenOverlay);
-
-      body.style.overflow = "hidden";
-      isImageFullscreenOpen = true;
-
-      createImageFullscreenOverlay.addEventListener('click', (e1) => {
-        createImageFullscreenOverlay.remove();
-        body.style.overflow = "scroll";
-        isImageFullscreenOpen = false;
+      allImageClickFullscreen[temp].addEventListener('click', function(e) {
+        const createImageFullscreenOverlay = document.createElement("div");
+        const createNestedImageFullscreenOverlay = document.createElement("div");
+  
+        createImageFullscreenOverlay.className = "image-fullscreen-overlay align-center";
+  
+        createNestedImageFullscreenOverlay.className = "image-fullscreen-overlay-nested";
+  
+        let imageInsideFullscreenOverlay = e.target.cloneNode(true);
+        imageInsideFullscreenOverlay.className = "image-inside-fullscreen-overlay-nested";
+  
+        createNestedImageFullscreenOverlay.innerHTML = imageInsideFullscreenOverlay.outerHTML;
+  
+        if(allImageClickFullscreen[temp].dataset.caption) {
+          const caption = allImageClickFullscreen[temp].dataset.caption;
+          const spanCaption = document.createElement("span");
+          const br = document.createElement("br");
+          const br2 = document.createElement("br");
+          spanCaption.className = "fs-1-2 italic py-5";
+          spanCaption.innerText = caption;
+          createNestedImageFullscreenOverlay.appendChild(br);
+          createNestedImageFullscreenOverlay.appendChild(br2);
+          createNestedImageFullscreenOverlay.appendChild(spanCaption);
+        }
+  
+        createImageFullscreenOverlay.appendChild(createNestedImageFullscreenOverlay);
+        e.target.parentElement.appendChild(createImageFullscreenOverlay);
+  
+        body.style.overflow = "hidden";
+        isImageFullscreenOpen = true;
+  
+        createImageFullscreenOverlay.addEventListener('click', function() {
+          createImageFullscreenOverlay.parentNode.removeChild(createImageFullscreenOverlay);
+          body.style.overflow = "scroll";
+          isImageFullscreenOpen = false;
+        });
       });
-    });
+    }()); // Run immediately - IE Support
   }
 });
 // Image Click fullscreen END
@@ -142,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Content click modal START
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
   const allContentClickModals = document.querySelectorAll('.content-click-modal');
   const allModals = document.querySelectorAll('.modal');
 
@@ -152,23 +192,28 @@ document.addEventListener('DOMContentLoaded', () => {
   let modalNumber;
 
   for (let i = 0; i < allModals.length; i++) {
-    allContentClickModals[i].addEventListener('click', () => {
-      body.style.overflow = "hidden";
-      allModals[i].style.display = "block";
-      modalNumber = i;
-      isModalOpened = true;
-      window.location.href = "#modal-dialog";
-    });
+    (function(){
+      let temp = i;
 
-    allModals[i].addEventListener('click', (e) => {
-      if(isModalOpened) {
-        if(e.target.id === "modal" || e.target.id === "modal-close") {
-          body.style.overflow = "auto";
-          allModals[modalNumber].style.display = "none";
-          isModalOpened = false;
+      allContentClickModals[temp].addEventListener('click', function() {
+        body.style.overflow = "hidden";
+        allModals[temp].style.display = "block";
+        modalNumber = temp;
+        isModalOpened = true;
+        window.location.href = "#modal-dialog";
+      });
+  
+      allModals[temp].addEventListener('click', function(e) {
+        if(isModalOpened) {
+          if(e.target.id === "modal" || e.target.id === "modal-close") {
+            body.style.overflow = "auto";
+            allModals[modalNumber].style.display = "none";
+            isModalOpened = false;
+            window.location.href = "#componentsContentSection";
+          }
         }
-      }
-    });
+      });
+    }());
   }
 });
 // Content click modal END

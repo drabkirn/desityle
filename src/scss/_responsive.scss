@@ -1,0 +1,33 @@
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 70%;
+}
+
+.row:before, .row:after {
+  content: "";
+  display: table ;
+  clear: both;
+}
+
+[class*="col-"] {
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@for $i from 1 through 12 {
+  $width: round(percentage($i/12) * 1000)/1000;
+
+  .col-dsk-#{$i} {
+    width: $width;
+  }
+}
+
+@for $i from 0 through 11 {
+  $margin: round(percentage($i/12) * 1000)/1000;
+
+  .col-dsk-offset-#{$i} {
+    margin-left: $margin;
+  }
+}

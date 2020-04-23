@@ -1,0 +1,630 @@
+@import 'config';
+@import 'defaults';
+@import 'defaultsEnhancements';
+
+
+
+// Colors and Backgorunds START
+@each $key, $color-name in $available-colors-list {
+  .#{$key}-bg {
+    @include set-background(map-get($available-colors-list, $key));
+  }
+
+  .#{$key}-text {
+    color: map-get($available-colors-list, $key) !important;
+  }
+}
+// Colors and Backgorunds END
+
+
+
+// Alignment START
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* Horizontal and Vertical align content */
+.align-center-flex-vh {
+  // Below is supported
+  /* doiuse-disable */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* doiuse-enable */
+}
+
+.align-left-flex-vh {
+  // Below is supported
+  /* doiuse-disable */
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  /* doiuse-enable */
+}
+
+.align-right-flex-vh {
+  // Below is supported
+  /* doiuse-disable */
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  /* doiuse-enable */
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: left;
+}
+
+.float-clearfix {
+  clear: both;
+}
+// Alignment END
+
+
+
+// Positioning START
+@each $amount in $position-amounts {
+  .mt-#{$amount} {
+    margin-top: #{$amount}px !important;
+  }
+
+  .mr-#{$amount} {
+    margin-right: #{$amount}px !important;
+  }
+
+  .mb-#{$amount} {
+    margin-bottom: #{$amount}px !important;
+  }
+
+  .ml-#{$amount} {
+    margin-left: #{$amount}px !important;
+  }
+
+  .mx-#{$amount} {
+    margin: #{$amount}px 0 !important;
+  }
+
+  .my-#{$amount} {
+    margin: 0 #{$amount}px !important;
+  }
+
+
+  .pt-#{$amount} {
+    padding-top: #{$amount}px !important;
+  }
+
+  .pr-#{$amount} {
+    padding-right: #{$amount}px !important;
+  }
+
+  .pb-#{$amount} {
+    padding-bottom: #{$amount}px !important;
+  }
+
+  .pl-#{$amount} {
+    padding-left: #{$amount}px !important;
+  }
+
+  .px-#{$amount} {
+    padding: #{$amount}px 0 !important;
+  }
+
+  .py-#{$amount} {
+    padding: 0 #{$amount}px !important;
+  }
+}
+// Positioning END
+
+
+
+// Fonts START
+@each $key, $font-size in $font-amounts {
+  @if $font-size <= 1 {
+    .fs-#{$key} {
+      font-size: #{$font-size}em;
+      line-height: 1;
+    }
+  } @else if $font-size >= 1.1 and $font-size <= 1.3 {
+    .fs-#{$key} {
+      font-size: #{$font-size}em;
+      line-height: 1.2;
+    }
+  } @else {
+    .fs-#{$key} {
+      font-size: #{$font-size}em;
+    }
+  }
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+// Fonts END
+
+
+
+// Display START
+.display-on-dsk-only {
+  display: block;
+}
+
+.display-on-mob-only {
+  display: none;
+}
+
+.hide-on-dsk-only {
+  display: none;
+}
+
+.hide-on-mob-only {
+  display: block;
+}
+// Display END
+
+
+
+// Images START
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-click-fullscreen {
+  // Below not supported for old browsers, that's ok;
+  /* doiuse-disable */
+  cursor: zoom-in;
+  /* doiuse-enable */
+}
+
+.image-fullscreen-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  overflow-y: auto;
+
+  & &-nested {
+    width: 90%;
+    height: auto;
+    max-width: 100%;
+    margin: 10px auto;
+
+    .image-inside-fullscreen-overlay-nested {
+      // Below not supported for old browsers, that's ok;
+      /* doiuse-disable */
+      cursor: zoom-out;
+      /* doiuse-enable */
+      height: auto;
+    }
+
+    span {
+      background: $green-color;
+      border-radius: 10px;
+    }
+  }
+}
+// Images END
+
+
+
+// Videos START
+.video-responsive {
+  max-width: 100%;
+  height: auto;
+}
+// Videos END
+
+
+
+// Buttons START
+.btn {
+  font-family: $font-stack;
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  width: 200px;
+  border: 2px solid $light-grey-color;
+  border-radius: 20%;
+  font-size: 1.5em;
+  margin: 3px;
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+  background-color: $light-black-color;
+  color: $light-grey-color;
+
+  &:hover {
+    transform: skew(-10deg, 0deg);
+    color: $light-black-color;
+    background: $light-grey-color;
+    border-color: $light-black-color;
+  }
+}
+
+.btn.btn-rev:hover {
+  transform: skew(10deg, 0deg);
+}
+
+.btn.btn-wide {
+  width: 406px;
+}
+// Buttons END
+
+
+
+// Navbar START
+.default-navbar {
+  padding: 15px 0;
+  transition: all 0.5s ease-in-out;
+  height: 70px;
+
+  ul {
+    // Below is supported
+    /* doiuse-disable */
+    display: inline-flex;
+    /* doiuse-enable */
+
+    li {
+      padding-right: 15px;
+    }
+  }
+
+  & &-hamburger {
+    display: none;
+  }
+}
+
+.fixed-navbar {
+  display: none;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  background: $light-black-color;
+  box-shadow: 0 1px 2px 0 rgba(255, 255, 255, 0.8), 0 1px 0px -2px rgba(255, 255, 255, 0.8), 0 0px 1px 0px rgba(255, 255, 255, 0.8);
+
+  & &-logo {
+    padding-top: 5px;
+    padding-left: 10px;
+  }
+
+  & &-content {
+    display: block;
+  }
+
+  & &-content ul {
+    // Below is supported
+    /* doiuse-disable */
+    display: inline-flex;
+    /* doiuse-enable */
+
+    li {
+      padding: 15px 15px 0 0;
+    }
+  }
+
+  & &-hamburger {
+    display: none;
+  }
+}
+// Navbar END
+
+
+
+// Forms START
+form.form-tag {
+  max-width: 992px;
+}
+
+.form-field {
+  margin: 30px 0;
+
+  & &-label {
+    font-size: 1.3em;
+  }
+
+  & &-explanation {
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 3px 0;
+  }
+
+  & &-input {
+    font-family: $font-stack;
+    background-color: $light-black-color;
+    color: $light-grey-color;
+    width: 100%;
+    font-size: 1.3em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border: 3px solid $light-grey-color;
+    border-radius: 15px;
+    box-shadow: none;
+  }
+
+  & &-input:focus:invalid {
+    box-shadow: 2px 10px $dark-red-color;
+  }
+
+  & &-input:focus:valid {
+    box-shadow: 2px 10px $green-color;
+  }
+
+  & &-textarea {
+    // Below is unsupported on old browsers, that's OK!
+    /* doiuse-disable */
+    resize: vertical;
+    /* doiuse-enable */
+  }
+
+  /* Checkbox and radio styling */
+  & &-label-checkbox, & &-label-radio {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-right: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default checkbox and radio */
+  & &-label-checkbox &-checkbox, & &-label-radio &-radio {
+    display: none;
+  }
+
+  /* Create a custom checkbox and radio */
+  & &-label-checkbox &-checkmark, & &-label-radio &-radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 25px;
+    background: $light-black-color;
+    border: 2px solid $light-grey-color;
+  }
+
+  & &-label-radio &-radiomark {
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a dark-grey background color to checkbox and radio */
+  & &-label-checkbox:hover &-checkbox ~ &-checkmark, & &-label-radio:hover &-radio ~ &-radiomark {
+    background: $dark-grey-color;
+  }
+
+  /* When the checkbox/radiomark is checked, add a green background */
+  & &-label-checkbox &-checkbox:checked ~ &-checkmark, & &-label-radio &-radio:checked ~ &-radiomark {
+    background-color: $green-color;
+  }
+
+  /* Create the checkmark/radiomark (hidden when not checked) */
+  & &-checkmark:after, & &-radiomark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark or radiomark when checked */
+  & &-label-checkbox &-checkbox:checked ~ &-checkmark:after, & &-label-radio &-radio:checked ~ &-radiomark:after {
+    display: block;
+  }
+
+  /* Style the checkmark */
+  & &-label-checkbox &-checkmark:after {
+    left: 7px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  /* Style the radiomark */
+  & &-label-radio &-radiomark:after {
+    top: 5px;
+    left: 7px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+	  background: white;
+  }
+
+  /* Style the Select tag */
+  & &-select {
+    width: 88%;
+    background: $light-black-color;
+    color: $light-grey-color;
+    border: 2px solid $light-grey-color;
+    padding: 1px;
+    font-size: 20px;
+    // Below is unsupported on old browsers, that's OK!
+    // It will show plain old SELECT
+    /* doiuse-disable */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /* doiuse-enable */
+  }
+
+  & &-select-checkmark {
+    display: inline-block;
+    position: relative;
+    left: -36px;
+    top: -4px;
+    padding: 9px;
+    border: solid $light-grey-color;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}
+// Forms END
+
+
+
+// Jumbos START
+.jumbo {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  @include set-background($blue-color);
+}
+
+@each $key, $color-name in $available-messages-list {
+  .jumbo.jumbo-#{$key} {
+    @include set-background(map-get($available-messages-list, $key));
+  }
+}
+// Jumbos END
+
+
+
+// Badgetags START
+.badgetag {
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding: 3px 5px;
+  @include set-background($aqua-color);
+}
+
+@each $key, $color-name in $available-colors-list {
+  .badgetag.badgetag-#{$key} {
+    @include set-background(map-get($available-colors-list, $key));
+  }
+}
+// Badgetags END
+
+
+
+// Pagination START
+.pagination {
+  li {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    a {
+      border-bottom: none;
+      font-size: 1em;
+      border: 1px solid $light-grey-color;
+      padding: 4px 10px;
+    }
+
+    a:hover {
+      background: $light-grey-color;
+      color: $light-black-color;
+    }
+  }
+
+  & &-active {
+    background: $dark-red-color;
+  }
+}
+// Pagination END
+
+
+
+// OL TOC START
+.ol-toc {
+  list-style-type: none;
+  border: 2px solid $light-grey-color;
+  font-size: 1.3em;
+  padding: 0;
+  width: 60%;
+  margin: 0 auto;
+
+  & &-item {
+    padding-left: 1em;
+    border-bottom: 2px solid $light-grey-color;
+  }
+
+  & &-item:nth-child(odd) {
+    color: $light-pink-color;
+  }
+
+  & &-item:nth-child(odd):hover {
+    background: $dark-red-color;
+  }
+
+  & &-item:last-child {
+    border-bottom: none;
+  }
+
+  & &-item &-nested {
+    list-style-type: none;
+    padding-left: 0;
+    border-left: 2px solid;
+
+    li {
+      padding-left: 1em;
+      border-bottom: 2px solid $light-grey-color;
+    }
+
+    li:hover {
+      background: $light-grey-color;
+      color: $light-black-color;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
+// OL TOC END
+
+
+
+// Modal START
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  overflow-y: auto;
+
+  & &-dialog {
+    width: 80%;
+    max-width: 800px;
+    background: $light-black-color;
+    color: $light-grey-color;
+    margin: 40px auto;
+    padding: 1em;
+  }
+}
+// Modal END
+
+
+
+@import 'responsive';
+@import 'media';

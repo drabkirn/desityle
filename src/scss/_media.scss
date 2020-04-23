@@ -1,0 +1,203 @@
+// Small + Medium devices: Mobile + Tablets
+@media (max-width: 768px) {
+  // Default Tags START
+  h1 {
+    font-size: 3.5em;
+  }
+
+  h2 {
+    font-size: 2.6em;
+  }
+  
+  h3 {
+    font-size: 2em;
+  }
+
+  p, a, u, blockquote, table, ol, ul {
+    font-size: 1.2em;
+  }
+
+  pre {
+    font-size: 1em;
+  }
+
+  xmp {
+    font-size: 1.1em;
+  }
+  // Default Tags END
+
+
+
+  // Alignment START
+  .align-center-on-mob-only {
+    text-align: center;
+  }
+
+  .align-center-flex-vh {
+    display: block;
+  }
+
+  .align-left-flex-vh {
+    display: block;
+  }
+
+  .align-right-flex-vh {
+    display: block;
+  }
+  // Alignment END
+
+
+
+  // Display START
+  .display-on-mob-only {
+    display: block;
+  }
+
+  .display-on-dsk-only {
+    display: none;
+  }
+
+  .hide-on-mob-only {
+    display: none;
+  }
+
+  .hide-on-dsk-only {
+    display: block;
+  }
+  // Display END
+
+
+
+  // Fonts START
+  @each $key, $font-size in $font-amounts {
+    @if $font-size >= 1.4 and $font-size <= 2 {
+      .fs-#{$key} {
+        font-size: 1.3em;
+      }
+    }
+  }
+  // Fonts END
+
+
+
+  // Buttons START
+  .btn.btn-wide {
+    width: 200px;
+  }
+  // Buttons END
+
+
+
+  // Navbar START
+  .default-navbar {
+    & &-hamburger {
+      display: block;
+
+      .default-navbar-hamburger-links {
+        display: none;
+        background: $light-black-color;
+        position: absolute;
+        // Below is supported
+        /* doiuse-disable */
+        width: 100vw;
+        /* doiuse-enable */
+        left: 0;
+        top: 70px;
+        border-top: 1px solid $light-pink-color;
+        border-bottom: 1px solid $light-pink-color;
+        text-align: center;
+        padding-bottom: 20px;
+
+        li {
+          margin-top: 15px;
+
+          a {
+            display: inline-block;
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    & &-links {
+      display: none;
+    }
+  }
+
+  .fixed-navbar {
+    & &-content {
+      display: none;
+    }
+
+    & &-logo {
+      text-align: center;
+      width: 83.33%;
+      float: none;
+    }
+
+    & &-hamburger {
+      display: block;
+      position: relative;
+      padding-top: 10px;
+      padding-left: 10px;
+
+      .fixed-navbar-hamburger-links {
+        display: none;
+        background: $light-black-color;
+        position: absolute;
+        // Below is supported
+        /* doiuse-disable */
+        width: 100vw;
+        /* doiuse-enable */
+        left: 0;
+        top: 70px;
+        border-top: 1px solid $light-pink-color;
+        border-bottom: 1px solid $light-pink-color;
+        text-align: center;
+        padding-bottom: 20px;
+
+        li {
+          margin-top: 15px;
+
+          a {
+            display: inline-block;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+  // Navbar END
+
+
+
+  // OL TOC START
+  ol.ol-toc {
+    width: 100%;
+  }
+  // OL TOC END
+
+
+
+  // Responsive START
+  .container {
+    width: 90%;
+  }
+
+  @for $i from 1 through 12 {
+    $width: round(percentage($i/12) * 1000)/1000;
+  
+    .col-mob-#{$i} {
+      width: $width;
+    }
+  }
+  
+  @for $i from 0 through 11 {
+    $margin: round(percentage($i/12) * 1000)/1000;
+  
+    .col-mob-offset-#{$i} {
+      margin-left: $margin;
+    }
+  }
+  // Responsive END  
+}

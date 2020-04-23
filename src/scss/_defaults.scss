@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+*::selection, *::-moz-selection {
+  background: $light-grey-color;
+  color: $light-black-color;
+}
+
+body {
+  font-family: $font-stack;
+  word-break: break-word;
+  background: $light-black-color;
+  color: $light-grey-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-header-stack;
+}
+
+h1, h2, h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.4em;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
+h3 {
+  font-size: 2.4em;
+}
+
+h4 {
+  font-size: 1.8em;
+}
+
+h5 {
+  font-size: 1.3em;
+}
+
+h6 {
+  font-size: 1.2em;
+}
+
+p, a, u, blockquote {
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+a {
+  color: $light-grey-color;
+  text-decoration: none;
+  border-bottom: 3px dotted $aqua-color;
+}
+
+u {
+  text-decoration: none;
+  // Below is supported
+  /* doiuse-disable css-gradients */
+  background-image: linear-gradient($aqua-color, $aqua-color);
+  /* doiuse-enable css-gradients */
+  background-position: 0 94%;
+  background-repeat: no-repeat;
+  background-size: 0;
+  background-size: 100% 1.5px;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+i, em {
+  font-style: italic;
+}
+
+/* Links under p, u, i, b, em, blockquote and indent-lists must be equalized */
+p { a, u, i, b, em, strong, blockquote { font-size: 1em; } }
+u { a, p, i, b, em, strong, blockquote { font-size: 1em; } }
+a { u, p, i, b, em, strong, blockquote { font-size: 1em; } }
+i { u, p, a, b, em, strong, blockquote { font-size: 1em; } }
+b { u, p, a, i, em, strong, blockquote { font-size: 1em; } }
+em { u, p, a, i, b, strong, blockquote { font-size: 1em; } }
+strong { u, p, a, i, b, em, blockquote { font-size: 1em; } }
+blockquote { u, p, a, i, b, em, strong { font-size: 1em; } }
+ol li { ol, ul, p, u, a, i, b, em, strong, blockquote { font-size: 1em; } }
+ul li { ol, ul, p, u, a, i, b, em, strong, blockquote { font-size: 1em; } }
+
+
+hr {
+  width: 100%;
+  margin: 2em 0;
+}
+
+blockquote {
+  border-left: 10px solid $gold-color;
+  margin: 1.5em 0px;
+  padding: 0.5em 10px;
+  font-style: italic;
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  // Below is supported
+  /* doiuse-disable */
+  page-break-inside: avoid;
+  /* doiuse-enable */
+  font-family: $font-code-stack;
+  display: block;
+  color: $light-pink-color;
+  font-size: 1.1em;
+  max-width: 100%;
+  border: 1px solid $light-grey-color;
+  border-left: 4px solid $aqua-color;
+  overflow: auto;
+  margin: 10px 0;
+  padding: 1em 1.5em;
+  line-height: 1.5;
+}
+
+xmp {
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+table {
+  width: 100%;
+  border: 2px solid $light-grey-color;
+  border-top-color: $light-pink-color;
+  font-size: 1.3em;
+  margin: 0 auto;
+  text-align: center;
+}
+
+th {
+  padding: 5px;
+  color: $light-pink-color;
+  border-bottom: 2px solid $light-pink-color;
+  border-right: 2px solid $light-pink-color;
+  border-left: 2px solid $light-pink-color;
+  font-weight: bold;
+  font-style: italic;
+}
+
+td {
+  padding: 5px;
+  border-bottom: 2px solid $light-grey-color;
+  border-right: 2px solid $light-grey-color;
+}
+
+footer {
+  background: $dark-purple-color;
+  padding: 5px 5px 0px;
+}
+
+ol {
+  list-style-type: decimal;
+  line-height: 1.6em;
+  padding-left: 2em;
+  font-size: 1.3em;
+}
+
+ul {
+  list-style-type: disc;
+  line-height: 1.6em;
+  padding-left: 2em;
+  font-size: 1.3em;
+}

@@ -1,0 +1,128 @@
+hr.hr-center {
+  width: 40%;
+  margin: 3em auto;
+}
+
+
+
+// Blockquote Tags START
+@each $key, $color-name in $available-colors-list {
+  blockquote.blockquote-#{$key} {
+    border-left: 10px solid map-get($available-colors-list, $key);
+  }
+}
+// Blockquote Tags END
+
+
+
+// A Tags START
+@each $key, $color-name in $available-colors-list {
+  a.a-#{$key} {
+    border-bottom: 3px dotted map-get($available-colors-list, $key);
+  }
+}
+
+a.a-image {
+  text-decoration: none;
+  border-bottom: none;
+}
+// A Tags END
+
+
+
+// U Tags START
+@each $key, $color-name in $available-colors-list {
+  u.u-#{$key} {
+    // Below is supported
+    /* doiuse-disable */
+    background-image: linear-gradient(map-get($available-colors-list, $key), map-get($available-colors-list, $key));
+    /* doiuse-enable */
+  }
+}
+// U Tags END
+
+
+
+// OL Tags START
+@mixin olDRY($color){
+  border-left: 2px solid $color;
+}
+
+ol.ol-upper-latin {
+  @include olDRY($aqua-color);
+  list-style-type: upper-latin;
+}
+
+ol.ol-lower-latin {
+  @include olDRY($gold-color);
+  list-style-type: lower-latin;
+}
+
+ol.ol-upper-roman {
+  @include olDRY($orange-color);
+  list-style-type: upper-roman;
+}
+
+ol.ol-lower-roman {
+  @include olDRY($dark-yellow-color);
+  list-style-type: lower-roman;
+}
+
+ol.ol-no-border-left {
+  border-left: none;
+}
+// OL Tags END
+
+
+
+// UL Tags START
+@mixin ulDRY($color) {
+  border-left: 2px solid $color;
+}
+
+ul.ul-none {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.ul-circle {
+  @include ulDRY($aqua-color);
+  list-style-type: circle;
+}
+
+ul.ul-square {
+  @include ulDRY($gold-color);
+  list-style-type: square;
+}
+
+ul.ul-no-border-left {
+  border-left: none;
+}
+// UL Tags END
+
+
+
+// Code, PRE START
+pre.pre-code {
+  position: relative;
+
+  .pre-code-span {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 20%;
+    background: $dark-red-color;
+    color: $light-grey-color;
+  }
+
+  code xmp {
+    margin-top: 15px;
+  }
+}
+
+code.code-inline {
+  color: $light-pink-color;
+  font-size: 1em;
+  font-family: $font-code-stack;
+}
+// Code, PRE END
