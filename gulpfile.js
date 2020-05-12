@@ -86,6 +86,8 @@ gulp.task('html', gulp.series('clean', function() {
   .pipe(replace(`<a href="./components.html" class="btn btn-wide">Components</a>`, '<a href="/desityle/components" class="btn btn-wide">Components</a>'))
   .pipe(replace(`<a href="./showcase.html" class="btn btn-wide">Showcase</a>`, '<a href="/desityle/showcase" class="btn btn-wide">Showcase</a>'))
   .pipe(replace(`<link rel="stylesheet" href="./css/03-desityle.css">`, '<link rel="stylesheet" href="/desityle/css/desityle.min.css">'))
+  .pipe(replace(`<link rel="stylesheet" href="./custom.css">`, '<link rel="stylesheet" href="/desityle/custom.min.css">'))
+  .pipe(replace(`<script src="./custom.js"></script>`, '<script src="/desityle/custom.min.js"></script>'))
   .pipe(replace(`<script src="./js/01-app.js"></script>`, '<script src="/desityle/js/desityle.min.js"></script>'))
   .pipe(htmlmin({
     collapseWhitespace: true,
@@ -102,12 +104,14 @@ gulp.task('customCSS', gulp.series('clean', function() {
   return gulp.src(globs.customCSS)
     .pipe(autoprefixer())
     .pipe(minifyCSS())
+    .pipe(concat('custom.min.css'))
     .pipe(gulp.dest('./build'));
 }));
 
 gulp.task('customJS', gulp.series('clean', function() {
   return gulp.src(globs.customJS)
     .pipe(uglify())
+    .pipe(concat('custom.min.js'))
     .pipe(gulp.dest('./build'));
 }));
 

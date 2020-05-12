@@ -7,6 +7,10 @@
   color: $light-black-color;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font-stack;
   word-break: break-word;
